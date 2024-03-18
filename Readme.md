@@ -120,3 +120,7 @@ developer to replicate the application.
 Even if the answer doesn't provide practical example in a parametric acceptance-test format, it is still helpful to guide
 the developer in the testing process. The ChatGPT output could be used by the tester as a checklist, so that every aspect
 of the application is covered by the tests.
+
+In addition, after having provided the same input, I asked ChatGPT to generate Junit tests. The answer, situated in the
+LogicsImplTest class covers all the main functionalities of the application, anyway some interesting cases, like make both first and
+second click on the same cell, have not been tested. 
