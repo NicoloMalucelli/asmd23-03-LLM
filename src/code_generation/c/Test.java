@@ -6,14 +6,12 @@ public class Test {
 
     /*
     LLM: ChatGPT 3.5
-    Method: Tell the LLM what was the error of the previous implementation (code_generation.a)
+    Method: Tell the LLM what was the error of the previous implementation (code_generation.b)
 
-    The obtained solution is not working and moreover it doesn't separate the View aspect from the Logic.
+    1. the first click should not already mark the cells with *, but put a 1 instead.
+    Moreover, when the second click occures, only the cells between the first and the second click should be marked, not all the cell between (0,0) and the clicked one
 
-    - The GUI class contains methods that should normally belong to the Logic (e.g., allCellsSelected, updateRectangle, disableAllCells). LogicImpl contains instead just a method that call the public methods of the GUI.
-    - The number of rows and cols are not given as parameters of the constructor but are defined inside the GUI class.
-    - The logic of the application is wrong. At each click, all the cells between the clicked cell and the top-left corner are marked with *. First click and second click are treated in the same way.
-    - When all the cells are marked with * the game doesn't end until an additional click on any cell
+    2. refactor gui and logic so that ALL the public methods are in the logic and the GUI simply call them
 
      */
 
