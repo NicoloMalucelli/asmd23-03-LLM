@@ -68,3 +68,55 @@ The solution obtained with this last prompt is the one organized in the better w
 
 - The Logic contains Swing dependencies
 - The game doesn't end in the right moment but one click later
+
+## Task 2: TESTING
+
+By providing to ChatGPT the code of GUI and LogicImpl classes, and asking it to generate the test cases, the following 
+output has been produced.
+
+```
+To generate test cases for the provided solution, we can focus on various aspects such as boundary conditions, edge cases, and typical scenarios. Here's a list of test cases:
+
+Boundary Testing: Test the boundaries of the grid.
+
+Test the smallest possible grid size (1x1).
+Test a medium-sized grid (e.g., 5x5).
+Test the largest allowed grid size (e.g., 10x10).
+Hit Functionality Testing: Test the functionality of the hit method.
+
+Test hitting a cell once.
+Test hitting different cells consecutively.
+Test hitting cells in different orders.
+Selection Verification Testing: Test whether selected cells are marked correctly.
+
+After hitting two cells, verify if the cells between them are correctly marked as selected.
+Test selecting cells diagonally.
+Test selecting cells in different directions (horizontal, vertical).
+Selection Limit Testing: Test whether the game ends when all cells are selected.
+
+Fill the entire grid and check if the game ends.
+Fill almost the entire grid and verify that the game doesn't end until the last cell is selected.
+GUI Interaction Testing: Test the interaction between the GUI and the game logic.
+
+Click various cells and verify if they are marked correctly according to the game logic.
+Test clicking cells after the game is over and verify if they remain disabled.
+Test clicking cells rapidly and check for any unexpected behavior.
+Performance Testing: Test the performance of the application with large grid sizes.
+
+Measure the time taken to fill the grid with hits for different grid sizes.
+Check for any performance degradation or unexpected behavior with large grid sizes.
+Error Handling Testing: Test the behavior of the application when invalid input is provided.
+
+Provide negative coordinates and verify if appropriate error handling is in place.
+Test providing coordinates outside the grid bounds and verify the application's response.
+Concurrency Testing (Optional): If applicable, test the application's behavior under concurrent access.
+
+Simulate multiple users interacting with the GUI simultaneously and check for any race conditions or inconsistencies.
+```
+
+The provided test cases cover every aspect of the application, and by simply reading the response, is possible for any 
+developer to replicate the application. 
+
+Even if the answer doesn't provide practical example in a parametric acceptance-test format, it is still helpful to guide
+the developer in the testing process. The ChatGPT output could be used by the tester as a checklist, so that every aspect
+of the application is covered by the tests.
